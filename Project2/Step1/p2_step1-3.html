@@ -12,9 +12,10 @@
   display: grid;
   grid-template-columns: 400px 400px 400px;
   grid-template-rows: 200px;
-  grid-template-areas:"smol header ."
-  ;
   grid-gap: 20px;
+  grid-row-gap: 200px;
+  margin-top: 200px;
+
 
 }
 p{
@@ -32,34 +33,70 @@ img{
   float: left;
   border-radius: 50%;
 }
-#img{
-  margin: 0;
+.img{
+
   grid-column: span 1;
   max-width: 80%;
 
 
 }
 #imgsmall{
-  min-width: 20% !important;
-  max-width: 20% !important;
+  min-width: 70px !important;
+  max-width: 70px !important;
   border-radius: 0;
-  float:right;
+  float:left;
   transform: rotate(-10deg);
+  margin-left:350px;
+
 }
 
 
-#small{
-  grid-column: span 1;
-  float:right;
-  grid-area: smol;
-}
 
 h1{
-  grid-area: header;
-  grid-column: span 2;
   font-size: 40pt;
   font-family: sans-serif;
+  color: lightblue;
+
+
+
 }
+
+.nocircle
+{
+  border-radius: 0;
+  max-width: 30%;
+  min-width: 30%;
+  float: left;
+
+}
+.two
+{
+  grid-column: span 2;
+}
+#top{
+  top: 0px;
+  background: linear-gradient(rgba(255,255,255,1) 70%, rgba(255,255,255,0) );
+  position: fixed;
+  width: 1250px;
+}
+
+
+.first{
+  font-size: 13pt;
+  grid-column: span 2;
+}
+
+.no{
+border-radius: 0;
+
+
+}
+
+.insta{
+  max-width: 75%;
+  min-width: 75%;
+}
+
 
 </style>
 
@@ -68,23 +105,46 @@ h1{
 
 
 <body>
+
+  <div id="top"> <img id="imgsmall" src="UI/04.png">
+   <h1>SNAPCHAT FILTERS</h1>
+   </div>
+
+
   <div id="grid">
-    <div id="small"> <img id="imgsmall" src="UI/04.png"></div>
-     <h1>SNAPCHAT FILTERS</h1>
-<p><br><br><br><br> At the end of 2013, Snapchat first introduced filters to it's interface. This allowed a blue, pink, and black & white filter, along with timestamps </p><p id="img">  <img src="UI/01.gif"> </p>  <p id="img"> <img src="UI/03.jpg"></p>
+ <p class="first"> Snapchat has become one of the biggest social media platforms in the past 5 years. This is due to many of it's unique features like disapearing messages, stories, facial recognition lenses, geofilters and many more. However, it took awhile to get where we are today. </p>  <p></p>
 
-<p><br><br><br><br><br><br> In July of 2014, Snapchat introduced geofilters in many major cities and areas. </p>  <div id="img">  <img src="UI/02.JPG"> </div> <p></p>
+<p><br><br><br><br><br><br> In 2002, the first cellphone with a camera built into it was introduced to the U.S. It was sprints Sanyo SCP-5300. The quality of images were very poor since they were made for very small screens. Though it was a very basic interface, it came with image filters like sepia, black and white, and negative. </p> <div class="img">  <img class="no" src="UI/cameraphone.jpg"> </div> <div class="img">  <img src="UI/smol.jpg"> </div>
+
+<p><br><br><br><br><br><br> Fastfoward 5 years to the creation of the very first smartphone, the Apple iPhone. Released in July of 2007, The iPhone quickly became an inspiration for many new smartphones within the next few years.</p> <div class="img">  <img src="UI/iphone1.jpg"> </div> <div class="img"><br><br><br><br>  <img class="no" src="UI/iphone2.webp"> </div>
+
+<p>In 2010, the photo sharing app <em>Instagram</em> was introduced. It allowed for square format images to be shared as a nod to vintage polaroid photos. This was accomponied by 16 different filters that pulled in many users at this time, since photo filters were still in their basic stages. Image filters became highly popular in a short time. </p> <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/G/" data-instgrm-version="8" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:8px;"> <div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"> <div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAMUExURczMzPf399fX1+bm5mzY9AMAAADiSURBVDjLvZXbEsMgCES5/P8/t9FuRVCRmU73JWlzosgSIIZURCjo/ad+EQJJB4Hv8BFt+IDpQoCx1wjOSBFhh2XssxEIYn3ulI/6MNReE07UIWJEv8UEOWDS88LY97kqyTliJKKtuYBbruAyVh5wOHiXmpi5we58Ek028czwyuQdLKPG1Bkb4NnM+VeAnfHqn1k4+GPT6uGQcvu2h2OVuIf/gWUFyy8OWEpdyZSa3aVCqpVoVvzZZ2VTnn2wU8qzVjDDetO90GSy9mVLqtgYSy231MxrY6I2gGqjrTY0L8fxCxfCBbhWrsYYAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"></div> </div><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/p/G/" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Mike Krieger (@mikeyk)</a> on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2010-07-16T17:26:54+00:00">Jul 16, 2010 at 10:26am PDT</time></p></div></blockquote> <script async defer src="//www.instagram.com/embed.js"> </script>
+ <div class="img"><img class="no insta" src="UI/filters.webp"> </div>
+
+ <p><br><br><br><br><br><br> The next year, <em>Snapchat</em> was realeased and added a new twist on photosharing. Snapchat allowed users to share photos with each other that would last for up to 10 seconds and then be gone forever. Wihin a year, Snapchat became widely popular. </p> <div class="img">  <img src="UI/logo.svg"> </div><p></p>
+
+<p><br><br><br><br><br><br> At the end of 2013, Snapchat first introduced filters to it's interface. This allowed a blue, pink, and black & white filter, along with speed, weather, and timestamps. </p><div class="img">  <img src="UI/01.gif"> </div>  <div class="img"> <img src="UI/03.jpg"></div>
+
+<p><br><br><br><br><br><br> In July of 2014, Snapchat introduced geofilters in many major cities and areas. </p>  <div class="img y">  <img src="UI/02.JPG"> </div> <p></p>
 
 
-<p><br><br><br><br><br><br><br><br><br><br><br><br><br><br> In September of 2015, facial recognizing filters were introduced to Snapchat and were called Lenses </p> <div id="img">  <img src="UI/04.png"> </div>  <p></p>
+<p><br><br><br><br>In September of 2015, facial recognizing filters were introduced to Snapchat and were called Lenses<br><br><br><br><br><br> </p>
+<div class="img two">  <img class="nocircle" src="UI/04.png">  <img class="nocircle" src="UI/bunny.png"> <img class="nocircle" src="UI/uni.png"> <img class="nocircle" src="UI/flower.png"> <img class="nocircle" src="UI/heart.png"><img class="nocircle" src="UI/gold.png">  </div>
 
-<div id="img">  <img src="UI/05.jpg"> </div>
+<div class="img">  <img src="UI/05.jpg"> </div>
 
-<div id="img">  <img src="UI/06.jpeg"> </div>
+<div class="img">  <img src="UI/06.jpeg"> </div>
 
-<div id="img">  <img src="UI/07.jpg"> </div>
+<div class="img">  <img src="UI/07.jpg"> </div>
 
-<p><br><br><br><br><br><br> Soon many advertisers took advantage of the new craze for Snapchat Lenses and began making promotional Lenses for movie,tv, and music releases</p> <div id="img">  <img src="UI/08.jpg"> </div> <img src="UI/10-1.jpg">
+<p><br><br><br><br><br><br> Soon many advertisers took advantage of the new craze for Snapchat Lenses and began making promotional Lenses for movie,tv, and music releases</p> <div class="img">  <img src="UI/08.jpg"> </div> <img src="UI/10-1.jpg">
+
+<p><br><br><br><br><br><br>FACESWAP</p> <div class="img">  <img src="UI/09.jpg"> </div><div class="img">  <img src="UI/fs.jpg"> </div>
+
+<p><br><br><br><br><br><br>  create your own geofilter</p> <div class="img">  <img src="UI/create2.jpeg"> </div><div class="img">  <img src="UI/create1.jpg"> </div>
+
+<p><br><br><br><br><br><br>3D AR Lenses</p> <div class="img">  <img src="UI/13.png"> </div>
+
 
 
   </div>
