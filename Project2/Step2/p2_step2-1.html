@@ -216,14 +216,15 @@ max-width: 60%;
 <div><div id="scrollContainer">
 
   <h2><img class="scroll" src="../Step1/UI/01cut.jpg"><h2>
-</div> <br> &nbsp;Snapchats Original Filters</div><div><img class="smal" src="../Step1/UI/instaself.jpg"><br><br><img class="smal1" src="../Step1/UI/instaself.gif"><br><br><button type="button" onclick="myFunction()">+</button><p id="insta"></p></div>
+</div> <br> &nbsp;Snapchats Original Filters</div><div><img class="smal" src="../Step1/UI/instaself.jpg"><br><br><img class="smal1" src="../Step1/UI/instaself.gif"><br><br><button type="button" onclick="myFunction1()">+</button><p id="insta"></p></div>
 
 
 
 
 <div> <img class="fit" id="two" src="../Step1/UI/t02.png"> </div><div><div id="scrollContainer2">
 
-  <h2><img class="scroll" src="../Step1/UI/geo.jpg"><h2></div><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Snapchats Geofilters</div><div><img class="smal1" src="../Step1/UI/fbst.gif"><br><br><button type="button" onclick="myFunction()">+</button><p id="fb"></p></div>
+  <h2><img class="scroll" src="../Step1/UI/geo.jpg"><h2></div><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Snapchats Geofilters</div><div><img class="smal1" src="../Step1/UI/fbst.gif"><br><br><button type="button" onclick="myFunction2()">+</button><p id="fb">
+  </p></div>
 
 
 
@@ -260,7 +261,7 @@ max-width: 60%;
   img.onmousedown = function(){
     modal.style.display = "block";
     modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
+    captionText.innerHTML = "Dog Filter";
     ;
   }
 
@@ -277,7 +278,7 @@ max-width: 60%;
   img.onmousedown = function(){
     modal.style.display = "block";
     modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
+    captionText.innerHTML = "Bunny Filter";
   }
 
   var modal = document.getElementById('Modal3');
@@ -291,7 +292,7 @@ max-width: 60%;
   img.onmousedown = function(){
     modal.style.display = "block";
     modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
+    captionText.innerHTML = "Cat Filter";
   }
 
   var modal = document.getElementById('Modal4');
@@ -306,7 +307,7 @@ max-width: 60%;
   img.onmousedown = function(){
     modal.style.display = "block";
     modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
+    captionText.innerHTML = "Leopard Ears Filter?";
 
   }
 
@@ -324,7 +325,7 @@ max-width: 60%;
   img.onmousedown = function(){
     modal.style.display = "block";
     modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
+    captionText.innerHTML = "Unicorn Filter";
 
   }
 
@@ -342,7 +343,7 @@ max-width: 60%;
   img.onmousedown = function(){
     modal.style.display = "block";
     modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
+    captionText.innerHTML = "Golden Butterfly Crown Filter";
 
   }
 
@@ -410,10 +411,10 @@ scrolly2.style.scrollBehavior = "smooth"
  downPos2 = false
 })
 
-function myFunction() {
+function myFunction1() {
     document.getElementById("insta").innerHTML = "Instagram's Selfie Filters";
 }
-function myFunction() {
+function myFunction2() {
     document.getElementById("fb").innerHTML = "Facebooks Reaction Lenses";
 }
   </script>
