@@ -48,7 +48,7 @@ h1{
   font-family: sans-serif;
   font-size: 15pt;
   width: 200px;
-  
+
 
 }
 
@@ -146,6 +146,17 @@ h1{
   white-space: nowrap;
 
 }
+#scrollContainer3 {
+  width:200px;
+  height:200px;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+
+}
+
 
 h2{
   font-size: 15pt;
@@ -249,7 +260,10 @@ max-width: 60%;
 
 
 
-<div> <img class="fit" id="three" src="../Step1/UI/t03.png"> </div><p></p><p></p>
+<div> <img class="fit" id="three" src="../Step1/UI/t03.png"> </div><div><div id="scrollContainer3">
+
+  <h2><img class="scroll" src="../Step1/UI/time.jpg"><h2></div>
+    <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Snapchats Time, Temperature, Speed Filters</div><p></p>
 
 
 <div> <img class="fit" id="four" src="../Step1/UI/t04.png"> </div><p></p><p></p>
@@ -376,27 +390,23 @@ max-width: 60%;
   scrolly.addEventListener("mousedown",function(e){
     downPos = e.clientX
     downScroll = scrolly.scrollLeft
+    scrolly.style.scrollBehavior = "unset"
   })
   document.addEventListener("mousemove",function(e){
     if(downPos){
+      console.log('yo', downScroll + downPos - e.clientX)
         scrolly.scrollTo(downScroll + downPos - e.clientX,0)
     }
   })
   document.addEventListener("mouseup",function(e){
     let currentScroll = (downScroll + downPos - e.clientX)
-    let miss = (downScroll + downPos - e.clientX) % scrolly.clientWidth
- if(miss < scrolly.clientWidth/2){
-   console.log('left',currentScroll - miss)
-   scrolly.scrollTo(currentScroll - miss, 0)
- } else {
-   console.log('right',currentScroll + scrolly.clientWidth - miss)
-   scrolly.scrollTo(currentScroll + scrolly.clientWidth - miss, 0)
- }
 
 scrolly.style.scrollBehavior = "smooth"
+  let finalScrollPosition = Math.round(currentScroll / scrolly.clientWidth) * scrolly.clientWidth
 
- scrolly.scrollTo(currentScroll - miss, 0)
- downPos = false
+   scrolly.scrollTo(finalScrollPosition, 0)
+   downPos = false
+
 })
 
 
@@ -431,6 +441,34 @@ scrolly2.style.scrollBehavior = "smooth"
  scrolly2.scrollTo(currentScroll2 - miss2, 0)
  downPos2 = false
 })
+
+let scrolly3 = document.querySelector("#scrollContainer3")
+
+let downPos3 = false;
+let downScroll3 = 0
+
+scrolly3.addEventListener("mousedown",function(e){
+  downPos3 = e.clientX
+  downScroll3 = scrolly3.scrollLeft
+  scrolly3.style.scrollBehavior = "unset"
+})
+document.addEventListener("mousemove",function(e){
+  if(downPos3){
+    console.log('yo', downScroll3 + downPos3 - e.clientX)
+      scrolly3.scrollTo(downScroll3 + downPos3 - e.clientX,0)
+  }
+})
+document.addEventListener("mouseup",function(e){
+  let currentScroll3 = (downScroll3 + downPos3 - e.clientX)
+
+scrolly3.style.scrollBehavior = "smooth"
+let finalScrollPosition3 = Math.round(currentScroll3 / scrolly3.clientWidth) * scrolly3.clientWidth
+
+ scrolly3.scrollTo(finalScrollPosition3, 0)
+ downPos3 = false
+
+})
+
 
 function myFunction1() {
     document.getElementById("insta").innerHTML = "Instagram's Selfie Filters";
