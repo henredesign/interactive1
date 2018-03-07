@@ -1,0 +1,424 @@
+<DOCTYPE html>
+<html>
+<head>
+  <title> Access to Filters </title>
+    <style>
+    div{
+      font-family: sans-serif;
+    }
+
+    #grid{
+      display: grid;
+      grid-template-columns: 200px 200px 1fr;
+      grid-template-rows: auto;
+      grid-gap: 200px;
+      grid-row-gap: 100px;
+      margin: 50px 50px;
+    }
+    .fit{
+      grid-column: span 1;
+      min-width: 200px;
+      max-width: 100%;
+      cursor: pointer;
+      transition: 0.3s ease;
+      border-radius: 20%;
+      -webkit-user-drag: none;
+    }
+
+h1{
+  font-family: sans-serif;
+  font-size: 15pt;
+
+}
+
+   .fit:hover {
+     opacity: 0.7;
+     background-color: lightblue;
+     border-radius: 50%;
+
+              }
+
+
+
+
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 300px;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(240,245,250,1); /* Black w/ opacity */
+      }
+
+
+
+    .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 500px;
+}
+.caption {
+    margin: auto;
+    display: block;
+    width: 20%;
+    max-width: 700px;
+    text-align: center;
+    color: black;
+    padding: 10px 0;
+    height: 150px;
+    float: left;
+    font-family: monospace;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button *
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+
+#scrollContainer {
+  width:200px;
+  height:200px;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+
+}
+.scroll{
+
+  position: absolute;
+  -webkit-user-drag: none;
+  height: 200px;
+
+
+}
+#scrollContainer2 {
+  width:200px;
+  height:200px;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+
+}
+
+h2{
+  font-size: 15pt;
+  font-family: sans-serif;
+}
+
+.button{
+  background-color: gray;
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  text-align: center;
+}
+
+  .smal{
+max-width: 40%;
+  }
+
+  .smal1{
+max-width: 60%;
+  }
+
+
+
+    </style>
+
+
+
+
+  </head>
+<body>
+
+
+
+  <div id="Modal1" class="modal">
+
+    <img class="modal-content" id="img01" src="../Step1/UI/t01.png">
+
+    <div class="caption" id="caption1">Dog Filter</div>
+
+    </div>
+
+    <div id="Modal2" class="modal">
+
+      <img class="modal-content" id="img02" src="../Step1/UI/t02.png">
+
+      <div class="caption" id="caption2">Bunny Filter</div>
+
+      </div>
+
+      <div id="Modal3" class="modal">
+
+        <img class="modal-content" id="img03" src="../Step1/UI/t03.png">
+
+        <div class="caption" id="caption3">Cat Filter</div>
+
+        </div>
+
+        <div id="Modal4" class="modal">
+
+          <img class="modal-content" id="img04" src="../Step1/UI/t04.png">
+
+          <div class="caption" id="caption4">Leopard Ears Filter?</div>
+
+          </div>
+
+          <div id="Modal5" class="modal">
+
+            <img class="modal-content" id="img05" src="../Step1/UI/t05.png">
+
+            <div class="caption" id="caption5">Unicorn Filter</div>
+
+            </div>
+
+            <div id="Modal6" class="modal">
+
+              <img class="modal-content" id="img06" src="../Step1/UI/t06.png">
+
+              <div class="caption" id="caption6">Golden Butterfly Crown Filter</div>
+
+              </div>
+
+
+
+<div id="grid">
+<h1> Filters Accessed by Pressing and Holding</h1><h1> Filters Accessed by Swiping</h1><h1> Filters Accessed by Pressing a Button</h1>
+
+<div> <img class="fit" id="one" src="../Step1/UI/t01.png"> </div>
+<div><div id="scrollContainer">
+
+  <h2><img class="scroll" src="../Step1/UI/01cut.jpg"><h2>
+</div> <br> &nbsp;Snapchats Original Filters</div><div><img class="smal" src="../Step1/UI/instaself.jpg"><br><br><img class="smal1" src="../Step1/UI/instaself.gif"><br><br><button type="button" onclick="myFunction()">+</button><p id="insta"></p></div>
+
+
+
+
+<div> <img class="fit" id="two" src="../Step1/UI/t02.png"> </div><div><div id="scrollContainer2">
+
+  <h2><img class="scroll" src="../Step1/UI/geo.jpg"><h2></div><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Snapchats Geofilters</div><div><img class="smal1" src="../Step1/UI/fbst.gif"><br><br><button type="button" onclick="myFunction()">+</button><p id="fb"></p></div>
+
+
+
+<div> <img class="fit" id="three" src="../Step1/UI/t03.png"> </div><p></p><p></p>
+
+
+<div> <img class="fit" id="four" src="../Step1/UI/t04.png"> </div><p></p><p></p>
+
+
+<div> <img class="fit" id="five" src="../Step1/UI/t05.png"> </div><p></p><p></p>
+
+
+<div> <img class="fit" id="six" src="../Step1/UI/t06.png"> </div><p></p><p></p>
+
+
+</div>
+
+
+
+
+  <script>
+
+  var modal = document.getElementById('Modal1');
+
+
+  var img = document.getElementById("one");
+  var modalImg = document.getElementById("img01");
+  var captionText = document.getElementById("caption1");
+
+  img.onmouseup = function() {
+  modal.style.display = "none";
+}
+
+  img.onmousedown = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+    ;
+  }
+
+
+  var modal = document.getElementById('Modal2');
+
+  var img = document.getElementById("two");
+  var modalImg = document.getElementById("img02");
+  var captionText = document.getElementById("caption2");
+
+  img.onmouseup = function() {
+  modal.style.display = "none";}
+
+  img.onmousedown = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+
+  var modal = document.getElementById('Modal3');
+  var img = document.getElementById("three");
+  var modalImg = document.getElementById("img03");
+  var captionText = document.getElementById("caption3");
+
+  img.onmouseup = function() {
+  modal.style.display = "none";}
+
+  img.onmousedown = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+  }
+
+  var modal = document.getElementById('Modal4');
+
+  var img = document.getElementById("four");
+  var modalImg = document.getElementById("img04");
+  var captionText = document.getElementById("caption4");
+
+  img.onmouseup = function() {
+  modal.style.display = "none";}
+
+  img.onmousedown = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+
+  }
+
+  var modal = document.getElementById('Modal5');
+
+
+  var img = document.getElementById("five");
+  var modalImg = document.getElementById("img05");
+  var captionText = document.getElementById("caption5");
+
+  img.onmouseup = function() {
+  modal.style.display = "none";
+}
+
+  img.onmousedown = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+
+  }
+
+  var modal = document.getElementById('Modal6');
+
+
+  var img = document.getElementById("six");
+  var modalImg = document.getElementById("img06");
+  var captionText = document.getElementById("caption6");
+
+  img.onmouseup = function() {
+  modal.style.display = "none";
+}
+
+  img.onmousedown = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+
+  }
+
+  let scrolly = document.querySelector("#scrollContainer")
+
+  let downPos = false;
+  let downScroll = 0
+
+  scrolly.addEventListener("mousedown",function(e){
+    downPos = e.clientX
+    downScroll = scrolly.scrollLeft
+  })
+  document.addEventListener("mousemove",function(e){
+    if(downPos){
+        scrolly.scrollTo(downScroll + downPos - e.clientX,0)
+    }
+  })
+  document.addEventListener("mouseup",function(e){
+    let currentScroll = (downScroll + downPos - e.clientX)
+    let miss = (downScroll + downPos - e.clientX) % scrolly.clientWidth
+ if(miss < scrolly.clientWidth/2){
+   console.log('left',currentScroll - miss)
+   scrolly.scrollTo(currentScroll - miss, 0)
+ } else {
+   console.log('right',currentScroll + scrolly.clientWidth - miss)
+   scrolly.scrollTo(currentScroll + scrolly.clientWidth - miss, 0)
+ }
+
+scrolly.style.scrollBehavior = "smooth"
+
+ scrolly.scrollTo(currentScroll - miss, 0)
+ downPos = false
+})
+
+
+
+  let scrolly2 = document.querySelector("#scrollContainer2")
+
+  let downPos2 = false;
+  let downScroll2 = 0
+
+  scrolly2.addEventListener("mousedown",function(e){
+    downPos2 = e.clientX
+    downScroll2 = scrolly2.scrollLeft
+  })
+  document.addEventListener("mousemove",function(e){
+    if(downPos2){
+        scrolly2.scrollTo(downScroll2 + downPos2 - e.clientX,0)
+    }
+  })
+  document.addEventListener("mouseup",function(e){
+    let currentScroll2 = (downScroll2 + downPos2 - e.clientX)
+    let miss2 = (downScroll2 + downPos2 - e.clientX) % scrolly2.clientWidth
+ if(miss2 < scrolly2.clientWidth/2){
+   console.log('left',currentScroll2 - miss2)
+   scrolly2.scrollTo(currentScroll2 - miss2, 0)
+ } else {
+   console.log('right',currentScroll2 + scrolly2.clientWidth - miss2)
+   scrolly2.scrollTo(currentScroll2 + scrolly2.clientWidth - miss2, 0)
+ }
+
+scrolly2.style.scrollBehavior = "smooth"
+
+ scrolly2.scrollTo(currentScroll2 - miss2, 0)
+ downPos2 = false
+})
+
+function myFunction() {
+    document.getElementById("insta").innerHTML = "Instagram's Selfie Filters";
+}
+function myFunction() {
+    document.getElementById("fb").innerHTML = "Facebooks Reaction Lenses";
+}
+  </script>
+
+</body>
+
+
+</html>
