@@ -7,6 +7,25 @@
       font-family: sans-serif;
     }
 
+#bar{
+  height: 1px;
+  width: 1200px;
+  background-color: Black;
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  left: 30px;
+}
+#bar2{
+  height: 1px;
+  width: 1200px;
+  background-color: Black;
+  position: absolute;
+  z-index: 1;
+  top: 150px;
+  left: 30px;
+}
+
     #grid{
       display: grid;
       grid-template-columns: 200px 200px 1fr;
@@ -28,6 +47,8 @@
 h1{
   font-family: sans-serif;
   font-size: 15pt;
+  width: 200px;
+  
 
 }
 
@@ -44,7 +65,7 @@ h1{
     .modal {
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
+        z-index: 2; /* Sit on top */
         padding-top: 100px; /* Location of the box */
         left: 300px;
         top: 0;
@@ -207,10 +228,10 @@ max-width: 60%;
 
               </div>
 
-
+<div id="bar"></div><div id="bar2"></div>
 
 <div id="grid">
-<h1> Filters Accessed by Pressing and Holding</h1><h1> Filters Accessed by Swiping</h1><h1> Filters Accessed by Pressing a Button</h1>
+<h1> Filters Accessed by Pressing & Holding</h1><h1> Filters Accessed by Swiping</h1><h1> Filters Accessed by Pressing a Button</h1>
 
 <div> <img class="fit" id="one" src="../Step1/UI/t01.png"> </div>
 <div><div id="scrollContainer">
@@ -414,6 +435,9 @@ scrolly2.style.scrollBehavior = "smooth"
 function myFunction1() {
     document.getElementById("insta").innerHTML = "Instagram's Selfie Filters";
 }
+
+
+
 function myFunction2() {
     document.getElementById("fb").innerHTML = "Facebooks Reaction Lenses";
 }
