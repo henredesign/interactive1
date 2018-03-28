@@ -1,0 +1,25 @@
+#myGrid {
+  margin:50px;
+
+  /* make it a grid */
+  display: grid;
+
+  /* define the cells of the grid */
+  /* change these numbers   👇🏻  or units (like 100px or 2fr)*/
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+
+  /* grid gutter */
+  grid-gap: 20px;
+
+}
+
+
+#myGrid .empty {
+  display: none;
+
+}
+
+.spooky{
+  display: block;
+}
