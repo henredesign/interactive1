@@ -44,7 +44,7 @@ outline: none;
   font-size: 20pt;
   font-family: sans-serif;
   text-indent: 10pt;
-  position: absolute;
+  position: fixed;
   margin-top: -83px;
   margin-left: 230px;
   color: rgba(0, 0, 0, 0);
@@ -87,241 +87,319 @@ window.onkeypress = function(event)
    if (event.keyCode == 97 || event.keyCode == 65) {
       document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
       document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "amazon";
+      document.getElementById("searchbar").value = "amazon";
       document.getElementById("searchbar").disabled = true;
       document.getElementsByName("search")[0].placeholder="";
       document.getElementById("form").action = "p3-step3-a.html";
       localStorage.setItem("search", "a");
+      document.onkeydown = function (e) {
+    e.preventDefault();
+  }
 
    }
    if (event.keyCode == 98 || event.keyCode == 66) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "bank";
+      document.getElementById("searchbar").value = "bank";
       document.getElementsByName("search")[0].placeholder="";
       document.getElementById("searchbar").disabled = true;
       localStorage.setItem("search", "b");
       document.getElementById("form").action = "p3-step3-a.html";
+      document.onkeydown = function (e) {
+    e.preventDefault();
+  }
 
    }
 
    if (event.keyCode == 99 || event.keyCode == 67) {
   document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
   document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "craigslist";
+      document.getElementById("searchbar").value = "craigslist";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "c");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 100 || event.keyCode == 68) {
     document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
     document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "dominos";
+      document.getElementById("searchbar").value = "dominos";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "d");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
 
    }
    if (event.keyCode == 101 || event.keyCode == 69) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "ESPN";
+      document.getElementById("searchbar").value = "ESPN";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "e");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 102 || event.keyCode == 70) {
     document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
     document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "facebook";
+      document.getElementById("searchbar").value = "facebook";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "f");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 103 || event.keyCode == 71) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "giraffe";
+      document.getElementById("searchbar").value = "giraffe";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "g");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 104 || event.keyCode == 72) {
   document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
   document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "horoscope";
+      document.getElementById("searchbar").value = "horoscope";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "h");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 105 || event.keyCode == 73) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "indeed";
+      document.getElementById("searchbar").value = "indeed";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "i");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 106 || event.keyCode == 74) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "jupiter";
+      document.getElementById("searchbar").value = "jupiter";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "j");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 107 || event.keyCode == 75) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "kardashian";
+      document.getElementById("searchbar").value = "kardashian";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "k");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 108 || event.keyCode == 76) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "living spaces";
+      document.getElementById("searchbar").value = "living spaces";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "l");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 109 || event.keyCode == 77) {
     document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
     document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "maps";
+      document.getElementById("searchbar").value = "maps";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "m");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 110 || event.keyCode == 78) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "news";
+      document.getElementById("searchbar").value = "news";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "n");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 111 || event.keyCode == 79) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "office";
+      document.getElementById("searchbar").value = "office";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "o");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 112 || event.keyCode == 80) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "powerball";
+      document.getElementById("searchbar").value = "powerball";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "p");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 113 || event.keyCode == 81) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "quotes";
+      document.getElementById("searchbar").value = "quotes";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "q");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 114 || event.keyCode == 82) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "reddit";
+      document.getElementById("searchbar").value = "reddit";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "r");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 115 || event.keyCode == 83) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "starbucks";
+      document.getElementById("searchbar").value = "starbucks";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "s");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 116 || event.keyCode == 84) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "translate";
+      document.getElementById("searchbar").value = "translate";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "t");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 117 || event.keyCode == 85) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "united airlines";
+      document.getElementById("searchbar").value = "united airlines";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "u");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 118 || event.keyCode == 86) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "vine compilations";
+      document.getElementById("searchbar").value = "vine compilations";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "v");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 119 || event.keyCode == 87) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "weather";
+      document.getElementById("searchbar").value = "weather";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "w");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
 
    }
    if (event.keyCode == 120 || event.keyCode == 88) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "xbox";
+      document.getElementById("searchbar").value = "xbox";
       document.getElementsByName("search")[0].placeholder="";
       document.getElementById("searchbar").disabled = true;
       localStorage.setItem("search", "x");
       document.getElementById("form").action = "p3-step3-a.html";
+      document.onkeydown = function (e) {
+    e.preventDefault();
+  }
    }
    if (event.keyCode == 121 || event.keyCode == 89) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "youtube";
+      document.getElementById("searchbar").value = "youtube";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "y");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
    if (event.keyCode == 122 || event.keyCode == 90) {
      document.getElementById("ac").style.color = "rgba(0, 0, 0, 1)";
      document.getElementById("mag").style.opacity = "1";
-      document.getElementById("ac").innerHTML = "zillow";
+      document.getElementById("searchbar").value = "zillow";
         document.getElementsByName("search")[0].placeholder="";
         document.getElementById("searchbar").disabled = true;
         localStorage.setItem("search", "z");
         document.getElementById("form").action = "p3-step3-a.html";
+        document.onkeydown = function (e) {
+      e.preventDefault();
+    }
    }
 
  }
